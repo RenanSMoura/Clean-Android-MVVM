@@ -1,4 +1,4 @@
-package moura.renan.domain.usecase.browse
+package moura.renan.domain.usecase.bookmark
 
 data class Params constructor(val projectId: String) {
     companion object {

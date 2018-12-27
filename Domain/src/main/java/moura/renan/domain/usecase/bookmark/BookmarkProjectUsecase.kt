@@ -1,4 +1,4 @@
-package moura.renan.domain.usecase.browse
+package moura.renan.domain.usecase.bookmark
 
 import io.reactivex.Completable
 import moura.renan.domain.executor.PostExecutionThread
