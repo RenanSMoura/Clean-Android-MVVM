@@ -1,36 +1,55 @@
-ext{
+ext {
 
     //Android
     androidBuildToolsVersion = "28.0.0"
     androidMinSdkVersion = 21
     androidTargetSdkVersion = 28
     androidCompileSdkVersion = 28
-    kotlin_version = '1.2.71'
-
+    kotlinVersion = '1.2.71'
 
     //Libraries
     supportLibraryVersion = "28.0.0"
     rxJavaVersion = "2.3.0"
     javaXAnnotationVersion = "1.0"
     javaxInjectVersion = "1"
-
+    rxJavaVersion = '2.0.2'
+    rxKotlinVersion = '2.1.0'
+    androidAnnotationsVersion = '21.0.3'
+    daggerVersion = '2.11'
 
     //Testing
     jUnitVersion = "4.12"
     assertJVersion = "3.8.0"
     mockitoVersion = "1.9.5"
     mockitoKotlinVersion = "2.0.0"
+    robolectricVersion = '3.4.2'
+    mockitoVersion = '1.9.5'
 
     domainDependencies = [
-            javaxAnnotation : "javax.annotation:jsr250-api:${javaXAnnotationVersion}",
-            javaxInject : "javax.inject:javax.inject:${javaxInjectVersion}",
-            rxJava : "io.reactivex.rxjava2:rxkotlin:${rxJavaVersion}"
+            javaxAnnotation: "javax.annotation:jsr250-api:${javaXAnnotationVersion}",
+            javaxInject    : "javax.inject:javax.inject:${javaxInjectVersion}",
+            rxJava         : "io.reactivex.rxjava2:rxkotlin:${rxJavaVersion}"
     ]
 
     domainTestDependencies = [
-        jUnit : "junit:junit:${jUnitVersion}",
-        mockito : "com.nhaarman.mockitokotlin2:mockito-kotlin:${mockitoKotlinVersion}",
-        assertJ : "org.assertj:assertj-core:${assertJVersion}"
+            jUnit  : "junit:junit:${jUnitVersion}",
+            mockito: "com.nhaarman.mockitokotlin2:mockito-kotlin:${mockitoKotlinVersion}",
+            assertJ: "org.assertj:assertj-core:${assertJVersion}"
+    ]
+
+    dataDependencies = [
+            rxKotlin       : "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            kotlin         : "org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}",
+            javaxAnnotation: "javax.annotation:jsr250-api:${javaXAnnotationVersion}",
+            javaxInject    : "javax.inject:javax.inject:${javaxInjectVersion}",
+    ]
+
+    dataTestDependencies = [
+            junit      : "junit:junit:${jUnitVersion}",
+            kotlinJUnit: "org.jetbrains.kotlin:kotlin-test-junit:${kotlinVersion}",
+            assertj    : "org.assertj:assertj-core:${assertJVersion}",
+            mockito    : "com.nhaarman.mockitokotlin2:mockito-kotlin:${mockitoKotlinVersion}",
+            robolectric: "org.robolectric:robolectric:${robolectricVersion}"
     ]
 
 }
