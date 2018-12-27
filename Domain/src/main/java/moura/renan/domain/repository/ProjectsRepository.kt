@@ -8,7 +8,7 @@ import moura.renan.domain.module.Project
 //O Repository vai permitir os outros modulos acessarem os dados que estão dentro do Domain Module
 // sem necessariamente ter conhecimento da lógica de negócio
 //Ver aula 7
-interface ProjectRepository {
+interface ProjectsRepository {
 
     fun getProjects() : Observable<List<Project>>
 
