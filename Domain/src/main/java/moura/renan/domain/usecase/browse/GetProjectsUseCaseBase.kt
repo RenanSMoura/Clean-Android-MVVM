@@ -13,7 +13,7 @@ class GetProjectsUseCaseBase @Inject constructor(
     postExecutionThread: PostExecutionThread
 ) : BaseObservableUseCase<List<Project>, Nothing>(postExecutionThread) {
 
-    override fun buildUseCaseObservable(params: Nothing?): Observable<List<Project>> {
+     override fun buildUseCaseObservable(params: Nothing?): Observable<List<Project>> {
         return  projectsRepository.getProjects()
     }
 }
