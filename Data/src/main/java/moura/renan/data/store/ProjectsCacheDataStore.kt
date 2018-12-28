@@ -9,7 +9,7 @@ import javax.inject.Inject
 
 
 // Esse carinha aqui é o que vai fornecer o acesso da camada de Data para a camada de CACHE
-class ProjectsCacheDataStore @Inject constructor(
+open class ProjectsCacheDataStore @Inject constructor(
     private val projectsCache: ProjectsCache
 
 ) : ProjectsDataStore {

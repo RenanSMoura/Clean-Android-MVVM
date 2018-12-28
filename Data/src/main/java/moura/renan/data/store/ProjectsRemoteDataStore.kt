@@ -8,7 +8,7 @@ import moura.renan.data.repository.ProjectsRemote
 import javax.inject.Inject
 
 //Esse cara aqui vai fornecer acesso a camada de remote
-class ProjectsRemoteDataStore @Inject constructor(
+open class ProjectsRemoteDataStore @Inject constructor(
    private val projectsRemote : ProjectsRemote
 ) : ProjectsDataStore {
     override fun getProjects(): Observable<List<ProjectEntity>> {
