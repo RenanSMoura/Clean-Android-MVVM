@@ -3,10 +3,9 @@ package moura.renan.domain.usecase.browse
 import com.nhaarman.mockitokotlin2.whenever
 import io.reactivex.Observable
 import moura.renan.domain.executor.PostExecutionThread
-import moura.renan.domain.module.Project
+import moura.renan.domain.model.Project
 import moura.renan.domain.repository.ProjectsRepository
 import moura.renan.domain.usecase.DataFactory.ProjectDataFactory
-import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock

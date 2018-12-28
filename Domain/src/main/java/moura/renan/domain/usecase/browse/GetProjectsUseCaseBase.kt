@@ -3,7 +3,7 @@ package moura.renan.domain.usecase.browse
 import io.reactivex.Observable
 import moura.renan.domain.executor.PostExecutionThread
 import moura.renan.domain.usecase.BaseObservableUseCase
-import moura.renan.domain.module.Project
+import moura.renan.domain.model.Project
 import moura.renan.domain.repository.ProjectsRepository
 import javax.inject.Inject
 

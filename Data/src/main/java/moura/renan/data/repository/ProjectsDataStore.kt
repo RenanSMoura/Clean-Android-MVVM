@@ -7,11 +7,15 @@ import moura.renan.data.model.ProjectEntity
 interface ProjectsDataStore {
     fun getProjects(): Observable<List<ProjectEntity>>
 
-    fun clearProjects(): Completable
+    fun saveProjects(projects: List<ProjectEntity>) : Completable
+
+    fun clearProjects() : Completable
 
     fun getBookmarkedProjects(): Observable<List<ProjectEntity>>
 
     fun setProjectBookmarked(projectId: String): Completable
 
     fun setProjectNotBookmarked(projectId: String): Completable
+
+
 }

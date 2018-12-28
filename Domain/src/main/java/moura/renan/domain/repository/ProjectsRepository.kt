@@ -2,7 +2,7 @@ package moura.renan.domain.repository
 
 import io.reactivex.Completable
 import io.reactivex.Observable
-import moura.renan.domain.module.Project
+import moura.renan.domain.model.Project
 
 
 //O Repository vai permitir os outros modulos acessarem os dados que estão dentro do Domain Module

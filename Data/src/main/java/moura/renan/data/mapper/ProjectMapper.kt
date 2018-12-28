@@ -1,7 +1,7 @@
 package moura.renan.data.mapper
 
 import moura.renan.data.model.ProjectEntity
-import moura.renan.domain.module.Project
+import moura.renan.domain.model.Project
 import javax.inject.Inject
 
 class ProjectMapper @Inject constructor() : EntityMapper<ProjectEntity,Project>{

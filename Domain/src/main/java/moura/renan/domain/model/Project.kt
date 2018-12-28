@@ -1,4 +1,4 @@
-package moura.renan.domain.module
+package moura.renan.domain.model
 
 //Esse módulo representa a nossa lógica de negócio da aplicação
 class Project (val id : String, val name : String,

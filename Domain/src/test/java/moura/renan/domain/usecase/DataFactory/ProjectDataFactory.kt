@@ -1,6 +1,6 @@
 package moura.renan.domain.usecase.DataFactory
 
-import moura.renan.domain.module.Project
+import moura.renan.domain.model.Project
 import java.util.*
 
 object ProjectDataFactory {

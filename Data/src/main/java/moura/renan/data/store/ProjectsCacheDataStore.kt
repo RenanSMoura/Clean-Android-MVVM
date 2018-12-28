@@ -3,26 +3,41 @@ package moura.renan.data.store
 import io.reactivex.Completable
 import io.reactivex.Observable
 import moura.renan.data.model.ProjectEntity
+import moura.renan.data.repository.ProjectsCache
 import moura.renan.data.repository.ProjectsDataStore
+import javax.inject.Inject
 
-class ProjectsCacheDataStore : ProjectsDataStore {
+
+// Esse carinha aqui é o que vai fornecer o acesso da camada de Data para a camada de CACHE
+class ProjectsCacheDataStore @Inject constructor(
+    private val projectsCache: ProjectsCache
+
+) : ProjectsDataStore {
+
+
     override fun getProjects(): Observable<List<ProjectEntity>> {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return projectsCache.getProjects()
+    }
+
+
+    override fun saveProjects(projects: List<ProjectEntity>): Completable {
+        return projectsCache.saveProjects(projects)
+            .andThen(projectsCache.setLastCacheTime(System.currentTimeMillis()))
     }
 
     override fun clearProjects(): Completable {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return projectsCache.clearProjects()
     }
 
     override fun getBookmarkedProjects(): Observable<List<ProjectEntity>> {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return projectsCache.getBookmarkedProjects()
     }
 
     override fun setProjectBookmarked(projectId: String): Completable {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return projectsCache.setProjectAsBookmarked(projectId)
     }
 
     override fun setProjectNotBookmarked(projectId: String): Completable {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return projectsCache.setProjectAsNotBookmarked(projectId)
     }
 }
