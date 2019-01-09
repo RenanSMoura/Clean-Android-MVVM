@@ -1,7 +1,7 @@
 package moura.renan.remote.module.service
 
 import io.reactivex.Observable
-import moura.renan.remote.module.ProjectsResponseModel
+import moura.renan.remote.module.model.ProjectsResponseModel
 import retrofit2.http.GET
 import retrofit2.http.Query
 

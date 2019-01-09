@@ -1,7 +1,7 @@
 package moura.renan.remote.module.mapper
 
 import moura.renan.data.model.ProjectEntity
-import moura.renan.remote.module.ProjectModel
+import moura.renan.remote.module.model.ProjectModel
 import javax.inject.Inject
 
 

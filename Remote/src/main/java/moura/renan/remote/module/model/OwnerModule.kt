@@ -1,4 +1,4 @@
-package moura.renan.remote.module
+package moura.renan.remote.module.model
 
 import com.google.gson.annotations.SerializedName
 
