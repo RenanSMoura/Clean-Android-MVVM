@@ -39,10 +39,13 @@ dependencies {
 
     testImplementation cacheTestDependencies.junit
     testImplementation cacheTestDependencies.kotlinJUnit
-    testImplementation cacheTestDependencies.mockito
+//    testImplementation cacheTestDependencies.mockito
     testImplementation cacheTestDependencies.assertj
     testImplementation cacheTestDependencies.robolectric
     testImplementation cacheTestDependencies.archTesting
     testImplementation cacheTestDependencies.roomTesting
 
 }
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8

@@ -20,9 +20,8 @@ dependencies {
 
     implementation remoteTestDependencies.junit
     implementation remoteTestDependencies.kotlinJUnit
-    implementation remoteTestDependencies.mockito
+//    implementation remoteTestDependencies.mockito
     implementation remoteTestDependencies.assertj
 }
-
-sourceCompatibility = "7"
-targetCompatibility = "7"
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8

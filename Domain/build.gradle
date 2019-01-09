@@ -9,7 +9,7 @@ dependencies {
     implementation domainDependencies.javaxInject
 
     testImplementation domainTestDependencies.jUnit
-    testImplementation domainTestDependencies.mockito
+//    testImplementation domainTestDependencies.mockito
     testImplementation domainTestDependencies.assertJ
 }
 
