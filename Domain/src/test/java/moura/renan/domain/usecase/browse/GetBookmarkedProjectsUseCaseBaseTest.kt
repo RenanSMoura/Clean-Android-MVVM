@@ -12,7 +12,7 @@ import org.mockito.Mock
 import org.mockito.MockitoAnnotations
 
 class GetBookmarkedProjectsUseCaseBaseTest{
-    private lateinit var getBookmarkProjects : GetBookmarkedProjectsUseCaseBase
+    private lateinit var getBookmarkProjects : GetBookmarkedProjectsUseCase
     @Mock
     lateinit var projectsRepository: ProjectsRepository
     @Mock
@@ -21,7 +21,7 @@ class GetBookmarkedProjectsUseCaseBaseTest{
     @Before
     fun setUp() {
         MockitoAnnotations.initMocks(this)
-        getBookmarkProjects = GetBookmarkedProjectsUseCaseBase(projectsRepository, postExecutionThread)
+        getBookmarkProjects = GetBookmarkedProjectsUseCase(projectsRepository, postExecutionThread)
     }
 
     @Test

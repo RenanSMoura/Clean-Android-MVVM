@@ -8,9 +8,11 @@ import moura.renan.domain.repository.ProjectsRepository
 import javax.inject.Inject
 
 //Ver aula 11
-class GetBookmarkedProjectsUseCaseBase @Inject constructor(
+class GetBookmarkedProjectsUseCase @Inject constructor(
     private val projectsRepository: ProjectsRepository,
+
     postExecutionThread: PostExecutionThread
+
 ) : BaseObservableUseCase<List<Project>, Nothing>(postExecutionThread) {
 
     override fun buildUseCaseObservable(params: Nothing?): Observable<List<Project>> {
