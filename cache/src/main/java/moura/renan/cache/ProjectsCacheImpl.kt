@@ -12,9 +12,10 @@ import javax.inject.Inject
 
 //Testes na aula 48
 class ProjectsCacheImpl @Inject constructor(
-    private val projectsDatabase: ProjectsDatabase,
-    private val cachedMapper: CachedProjectMapper
+    private val projectsDatabase: ProjectsDatabase
 ) : ProjectsCache {
+
+    private val cachedMapper: CachedProjectMapper = CachedProjectMapper()
     override fun clearProjects(): Completable {
         return Completable.defer {
             projectsDatabase.cachedProjectsDao().deleteProjects()

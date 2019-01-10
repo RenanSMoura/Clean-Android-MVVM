@@ -1,6 +1,7 @@
 package moura.renan.mobileui.injection.module
 
 import android.app.Application
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import moura.renan.cache.ProjectsCacheImpl
@@ -18,6 +19,7 @@ abstract class CacheModule {
             return ProjectsDatabase.getInstance(application)
         }
     }
+    @Binds
     abstract fun bindProjectsCache(projectsCache: ProjectsCacheImpl) : ProjectsCache
 
 }

@@ -7,6 +7,7 @@ import dagger.MapKey
 import dagger.Module
 import dagger.multibindings.IntoMap
 import moura.renan.mobileui.injection.ViewModelFactory
+import moura.renan.presentation.viewmodel.BrowseBookmarkedProjectsViewModel
 import moura.renan.presentation.viewmodel.BrowseProjectsViewModel
 import kotlin.reflect.KClass
 
@@ -17,6 +18,11 @@ abstract class PresentationModule {
     @IntoMap
     @ViewModelKey(BrowseProjectsViewModel::class)
     abstract fun bindBrowseProjectsViewModel(viewModel: BrowseProjectsViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(BrowseBookmarkedProjectsViewModel::class)
+    abstract fun bindBrowseBookmarkedProjectsViewModel(viewModel: BrowseBookmarkedProjectsViewModel): ViewModel
 
     @Binds
     abstract fun bindViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory
